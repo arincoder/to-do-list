@@ -36,17 +36,3 @@ While building this project, I practiced and applied:
 - Breaking a larger program into smaller functions
 - Basic program structure and user interaction
 ```
-
-## Future Improvements
-
-Possible improvements I plan to add:
-
-- Prevent duplicate tasks
-- Add task completion status
-- Save tasks permanently using file handling
-- Add deadlines and dates
-- Create a graphical user interface (GUI)
-
-## Author
-
-Built as part of my journey learning Python and improving my programming skills.
