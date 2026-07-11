@@ -1,0 +1,67 @@
+def view_tasks():
+  num = 1
+  print("\nTasks: ")
+  for task in tasks:
+    print(f"{num}. {task}")
+    num += 1
+
+def add_task():
+  new_task = input("Enter new task: ")
+  new_task = new_task.capitalize()
+  tasks.append(new_task)
+  print("\nTask added successfully!")
+
+def remove_task():
+  task_num = int(input("Enter task number to remove: "))
+  if task_num >= 1 and task_num <= len(tasks):
+      removed_task = tasks.pop(task_num-1)
+      print(f"\nTask {removed_task} removed successfully!")
+  else:
+      print("Invalid task number.")
+
+def search_task():
+  searched_task =input("Enter task to search: ")
+  found = False
+  for task in tasks:
+    if task.lower() == searched_task.lower():
+        print(f"Task found: {task}")
+        found = True
+  if found == False:
+    print("Task not found")
+
+
+tasks = ["Sweeping the hall", "Washing dishes","Cooking", "Removing cobwebs", "Scrubbing"]
+while True:
+  print("\n=== TO DO LIST ===")
+  print("Select option: ")
+  print("1. View task")
+  print("2. Add task")
+  print("3. Remove task")
+  print("4. Search task")
+  print("5. Exit")
+
+  user_input = int(input("Enter option: "))
+
+
+  # if the user wants to view a task
+  if user_input == 1:
+    view_tasks()
+
+  # if the user wants to add a new task
+  elif user_input == 2:
+    add_task()
+
+  # if the user wants to remove a task
+  elif user_input == 3:
+    remove_task()
+
+  # if the user wants to search for a task
+  elif user_input == 4:
+    search_task()
+
+  # if the user wants to exit the program
+  elif user_input == 5:
+    print("Exiting the program.")
+    break
+
+
